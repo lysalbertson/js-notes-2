@@ -35,8 +35,13 @@
   // //   patches= patches++
   // // }
   //same statment ^ diff options
-for (let patches = 0; patches < 100; patches++){
-  newPatch(0)
-}
+// for (let patches = 0; patches < 100; patches++){
+//   newPatch(0)
+
+  function animate(){
+    newPatch()
+    setTimeout(animate, 2000)
+  }
+  nn.on ("click", animate)
 </script>
   </body>

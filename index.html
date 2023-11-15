@@ -23,9 +23,17 @@
   function newPatch () {
 //     API: code that browser ppl write for us (ex:document)
     const div = nn.create("div")
-    div.set("class" , "diamond")
+    const chance = Math.random()
+    if (chance > 0.5){
+    div.setAttribute("class" , "diamond")
+    }
     div.addto("body")
   }
-newPatch()
+  let patches = 0
+  while(patches < 100){
+    newPatch()
+    patches= patches+ 10
+  }
+
 </script>
   </body>

@@ -1,0 +1,31 @@
+<style>
+  div{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    
+    
+  }
+  .diamond{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); 
+  }
+</style>
+
+<body>
+<div class="diamond"></div>
+<div></div>
+
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+
+<script>
+/*global nn */
+  function newPatch () {
+//     API: code that browser ppl write for us (ex:document)
+    const div = nn.create("div")
+    div.set("class" , "diamond")
+    div.addto("body")
+  }
+newPatch()
+</script>
+  </body>
